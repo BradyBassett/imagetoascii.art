@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import MobileNavbar from "./components/mobileNavbar";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Feedback from "./pages/feedback";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <BrowserRouter>
+            <div className="font-body">
+                <MobileNavbar />
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                    <Route path="/feedback" element={<Feedback />}></Route>
+                    <Route
+                        path="*"
+                        element={
+                            <main>
+                                <p>You seem lost...</p>
+                            </main>
+                        }
+                    ></Route>
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
+};
 
 export default App;
