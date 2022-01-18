@@ -37,7 +37,10 @@ module.exports = {
       'lg': '540px',
       'xl': '650px',
       '2xl': '768px',
-    }
+    },
+    dropShadow: {
+        'container': '8px 8px 32px rgba(0, 0, 0, 0.2)',
+      }
   },
   plugins: [],
 }

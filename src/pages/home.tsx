@@ -11,7 +11,7 @@ const Home: React.FC = () => {
                     Select and upload an image to convert it to ASCII
                 </h2>
             </div>
-            <div className="bg-slate-200 rounded-xl h-auto">
+            <div className="bg-slate-200 rounded-xl h-auto drop-shadow-container">
                 <h2 className="font-semibold text-center text-xl py-4">Upload an Image</h2>
                 <div className="w-3/4 mx-auto pb-12">
                     <h3 className="text-lg text-center border-2 border-blue-400 border-dotted rounded-xl py-12 px-8 cursor-pointer hover:border-blue-600 5xl:px-16">
