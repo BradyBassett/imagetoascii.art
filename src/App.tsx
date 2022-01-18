@@ -1,19 +1,32 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MobileNavbar from "./components/mobileNavbar";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer";
+import Container from "./components/Container";
 import Home from "./pages/home";
 import About from "./pages/about";
 import Feedback from "./pages/feedback";
+import PrivatePolicy from "./pages/privatePolicy";
 
 const App: React.FC = () => {
     return (
         <BrowserRouter>
             <div className="font-body">
-                <MobileNavbar />
+                <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
-                    <Route path="/about" element={<About />}></Route>
-                    <Route path="/feedback" element={<Feedback />}></Route>
+                    <Route
+                        path="/about"
+                        element={<Container content={<About />} title="About" />}
+                    ></Route>
+                    <Route
+                        path="/feedback"
+                        element={<Container content={<Feedback />} title="Feedback" />}
+                    ></Route>
+                    <Route
+                        path="/privatePolicy"
+                        element={<Container content={<PrivatePolicy />} title="Private Policy" />}
+                    ></Route>
                     <Route
                         path="*"
                         element={
@@ -24,6 +37,7 @@ const App: React.FC = () => {
                     ></Route>
                 </Routes>
             </div>
+            <Footer />
         </BrowserRouter>
     );
 };
