@@ -13,8 +13,8 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-slate-200 rounded-xl h-auto">
                 <h2 className="font-semibold text-center text-xl py-4">Upload an Image</h2>
-                <div className="w-3/4 mx-auto pb-12 cursor-pointer">
-                    <h3 className="text-lg text-center border-2 border-blue-400 border-dotted rounded-xl py-5 px-8 hover:border-blue-600 5xl:py-10 5xl:px-16">
+                <div className="w-3/4 mx-auto pb-12">
+                    <h3 className="text-lg text-center border-2 border-blue-400 border-dotted rounded-xl py-12 px-8 cursor-pointer hover:border-blue-600 5xl:px-16">
                         Click to browse, or drag a file here
                     </h3>
                 </div>
