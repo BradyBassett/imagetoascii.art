@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
+import Canvas from "./components/fallingText/canvas";
 import Footer from "./components/footer";
 import Container from "./components/Container";
 import Home from "./pages/home";
@@ -12,6 +13,7 @@ const App: React.FC = () => {
     return (
         <BrowserRouter>
             <div className="font-body">
+                <Canvas />
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<Home />}></Route>
