@@ -22,11 +22,12 @@ const Canvas = () => {
             const x = Math.floor(Math.random() * width);
             let randValue = Math.random();
             if (randValue >= 0.5) {
-                randValue = Math.ceil(randValue * -1);
+                randValue = -0.5;
             } else {
-                randValue = 1;
+                randValue = 0.5;
             }
-            const velocityX = Math.random() * randValue;
+
+            const velocityX = Math.random() * -randValue;
             const velocityY = Math.random() * 1;
 
             return new Character(x, velocityX, velocityY);

@@ -13,7 +13,7 @@ export default class Character {
         this.velocityY = velocityY;
         this.value = this.getAsciiChar();
         this.alpha = Math.random();
-        this.decay = 0.002;
+        this.decay = 0.001;
     }
 
     getAsciiChar(): string {
@@ -27,8 +27,12 @@ export default class Character {
     }
 
     update(ctx: CanvasRenderingContext2D): void {
-        this.velocityX - 0.01;
-        this.velocityY - 0.01;
+        if (this.velocityX >= 0.001) {
+            this.velocityX -= 0.001;
+        }
+        if (this.velocityY >= 0.001) {
+            this.velocityY -= 0.001;
+        }
         this.x += this.velocityX;
         this.y += this.velocityY;
         this.alpha -= this.decay;
