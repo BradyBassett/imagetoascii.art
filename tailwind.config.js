@@ -19,8 +19,8 @@ module.exports = {
         '10xl': '1920px'
       },
       fontFamily: {
-        title: ['Patrick Hand'],
-        body: ['Balsamiq Sans']
+        title: ['PatrickHandSC'],
+        body: ['BalsamiqSans']
       },
       transitionProperty: {
         'opacity': 'opacity',
