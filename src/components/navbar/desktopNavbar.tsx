@@ -35,7 +35,7 @@ const DesktopNavbar: React.FC = () => {
                     return (
                         <li className="px-5 text-2xl 6xl:text-3xl 7xl:px-8" key={index}>
                             <Link
-                                className={`transition-all ease-in duration-200 hover:border-b-2 hover:border-slate-200${
+                                className={`transition-all duration-200 ease-in hover:border-b-2 hover:border-slate-200${
                                     isLinked[index].value ? " border-b-2 border-slate-200" : ""
                                 }`}
                                 to={path}

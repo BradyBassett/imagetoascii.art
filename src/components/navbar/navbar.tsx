@@ -6,9 +6,9 @@ import DesktopNavbar from "./desktopNavbar";
 const Navbar: React.FC = () => {
     return (
         <>
-            <nav className="h-24 px-6 flex">
+            <nav className="flex h-24 px-6">
                 <Link
-                    className="uppercase text-slate-200 self-center w-min text-2xl font-semibold font-title transition-all ease-in duration-150 sm:ml-[8%] md:mx-[12%] lg:mx-auto 5xl:ml-1 sm:text-3xl md:text-4xl xl:text-5xl hover:border-b-2 hover:border-slate-200 hover:pt-[2px]"
+                    className="w-min self-center font-title text-2xl font-semibold uppercase text-slate-200 transition-all duration-150 ease-in hover:border-b-2 hover:border-slate-200 hover:pt-[2px] sm:ml-[8%] sm:text-3xl md:mx-[12%] md:text-4xl lg:mx-auto xl:text-5xl 5xl:ml-1"
                     to="/"
                 >
                     imagetoascii.art

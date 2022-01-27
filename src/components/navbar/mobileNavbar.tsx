@@ -17,44 +17,44 @@ const MobileNavbar: React.FC = () => {
         <>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed right-6 w-10 h-10 bg-slate-200 rounded-xl self-center border-blue-600 border-2 z-20 sm:h-12 xl:h-16 sm:w-12 xl:w-16 sm:rounded-2xl 5xl:hidden"
+                className="fixed right-6 z-20 h-10 w-10 self-center rounded-xl border-2 border-blue-600 bg-slate-200 sm:h-12 sm:w-12 sm:rounded-2xl xl:h-16 xl:w-16 5xl:hidden"
             >
-                <div className="w-min mx-auto align-middle">
+                <div className="mx-auto w-min align-middle">
                     <div
-                        className={`bg-blue-600 w-6 h-1 rounded-md my-1 transition-all ease-in duration-200 sm:w-8 xl:w-10${
-                            isOpen ? " transform rotate-45 translate-y-2" : ""
+                        className={`my-1 h-1 w-6 rounded-md bg-blue-600 transition-all duration-200 ease-in sm:w-8 xl:w-10${
+                            isOpen ? " translate-y-2 rotate-45 transform" : ""
                         }`}
                     ></div>
                     <div
-                        className={`bg-blue-600 w-6 h-1 rounded-md my-1 transition-all ease-out duration-300 sm:w-8 xl:w-10${
-                            isOpen ? " transform translate-x-5 opacity-0" : ""
+                        className={`my-1 h-1 w-6 rounded-md bg-blue-600 transition-all duration-300 ease-out sm:w-8 xl:w-10${
+                            isOpen ? " translate-x-5 transform opacity-0" : ""
                         }`}
                     ></div>
                     <div
-                        className={`bg-blue-600 w-6 h-1 rounded-md my-1 transition-all ease-in duration-200 sm:w-8 xl:w-10${
-                            isOpen ? " transform -rotate-45 -translate-y-2" : ""
+                        className={`my-1 h-1 w-6 rounded-md bg-blue-600 transition-all duration-200 ease-in sm:w-8 xl:w-10${
+                            isOpen ? " -translate-y-2 -rotate-45 transform" : ""
                         }`}
                     ></div>
                 </div>
             </button>
             <div
-                className={`fixed left-0 top-0 bg-slate-200 w-screen h-screen z-10 transition-all ease-in-out duration-500 5xl:hidden${
-                    !isOpen ? " transform translate-x-full" : ""
+                className={`fixed left-0 top-0 z-10 h-screen w-screen bg-slate-200 transition-all duration-500 ease-in-out 5xl:hidden${
+                    !isOpen ? " translate-x-full transform" : ""
                 }`}
             >
-                <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <ul className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform">
                     {navList.map((link, index) => {
                         const { path, text } = link;
                         const delay = "delay-" + (index * 250 + 250);
                         return (
                             <li
                                 key={index}
-                                className={`text-blue-600 text-2xl my-16 text-center transition-all ease-out ${delay} sm:text-3xl md:text-4xl duration-300 ${
-                                    !isOpen ? " opacity-0 -translate-y-6" : ""
+                                className={`my-16 text-center text-2xl text-blue-600 transition-all ease-out ${delay} duration-300 sm:text-3xl md:text-4xl ${
+                                    !isOpen ? " -translate-y-6 opacity-0" : ""
                                 }`}
                             >
                                 <Link
-                                    className="transition-all ease-in duration-200 hover:border-b-2 hover:border-blue-600"
+                                    className="transition-all duration-200 ease-in hover:border-b-2 hover:border-blue-600"
                                     onClick={() => setIsOpen(false)}
                                     to={path}
                                 >
